@@ -1,3 +1,5 @@
+require 'timecop'
+
 feature 'viewing peeps', type: :feature do
   before(:each) do
     Peep.create(content: 'This is my first peep!', time_posted: Time.now)
@@ -16,4 +18,22 @@ feature 'viewing peeps', type: :feature do
     expect(top_peep).to have_content 'This will be at the top of the page'
   end
 
+  scenario 'peeps store the date and time they were posted' do
+    visit '/peeps/new'
+    fill_in 'content', with: 'This is another peep'
+    Timecop.freeze do
+      click_button 'Peep'
+      peep = Peep.last
+      expect(peep.time_posted).to eq Time.now
+    end
+  end
+
+  scenario 'peeps display the date and time they were posted' do
+    visit '/peeps/new'
+    fill_in 'content', with: 'Another test peep'
+    Timecop.freeze(Time.local(2018)) do
+      click_button 'Peep'
+      expect(page).to have_content '2018-01-01 00:00:00'
+    end
+  end
 end
