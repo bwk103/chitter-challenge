@@ -8,6 +8,8 @@ require 'database_cleaner'
 
 require './app/models/peep'
 
+require_relative './helpers/users'
+
 
 Capybara.app = ChitterApp
 
@@ -19,6 +21,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 SimpleCov.start
 
 RSpec.configure do |config|
+  config.include UserHelpers
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean

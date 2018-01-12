@@ -1,8 +1,8 @@
 feature 'home route', type: :feature do
 
-  scenario 'displays hello world' do
+  scenario "redirects to /peeps" do
     visit '/'
-    expect(page).to have_content 'Hello world'
+    expect(current_path).to eq '/peeps'
   end
 
 end
