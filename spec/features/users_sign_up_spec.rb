@@ -1,5 +1,9 @@
 feature 'sign up', type: :feature do
 
+  before(:each) do
+    DatabaseCleaner.clean
+  end
+
   scenario 'users can see a sign up form' do
     visit '/users/new'
     expect(page).to have_field 'name'

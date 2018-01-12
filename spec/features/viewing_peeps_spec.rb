@@ -2,6 +2,7 @@ require 'timecop'
 
 feature 'viewing peeps', type: :feature do
   before(:each) do
+    DatabaseCleaner.clean
     new_user
     single_peep
   end

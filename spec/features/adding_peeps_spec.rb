@@ -1,5 +1,6 @@
 feature 'adding peeps', type: :feature do
   before(:each) do
+    DatabaseCleaner.clean
     new_user
   end
 
