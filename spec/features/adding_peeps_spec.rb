@@ -1,4 +1,7 @@
 feature 'adding peeps', type: :feature do
+  before(:each) do
+    new_user
+  end
 
   scenario 'users can see a form to add peeps' do
     visit '/peeps/new'

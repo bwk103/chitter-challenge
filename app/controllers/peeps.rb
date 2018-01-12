@@ -13,8 +13,10 @@ class ChitterApp < Sinatra::Base
   end
 
   post '/peeps' do
-    @peep = Peep.new(content: params[:content], time_posted: Time.now)
-    @peep.save
+    @user = User.first(id: session[:user_id])
+    @peep = Peep.create(content: params[:content], time_posted: Time.now)
+    @user.peeps << @peep
+    @user.save
     redirect '/peeps'
   end
 end

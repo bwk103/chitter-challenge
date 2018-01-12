@@ -6,4 +6,6 @@ class Peep
   property :content, Text
   property :time_posted, Time
 
+  belongs_to :user, required: false
+
 end

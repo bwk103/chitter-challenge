@@ -6,7 +6,7 @@ Chitter
 <ul class="peep-list">
   <% @peeps.each do |peep| %>
     <li class="peep"><%=peep.content %>
-      Posted by Ben at <%=peep.time_posted %>
+      Posted by <%=peep.user.username %> at <%=peep.time_posted %>
     </li>
     <% end %>
 </ul>
