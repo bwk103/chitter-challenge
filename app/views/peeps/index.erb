@@ -1,0 +1,8 @@
+Chitter
+<ul>
+  <% @peeps.each do |peep| %>
+    <li><%=peep.content %>
+      Posted by Ben at <%=peep.time_posted %>
+    </li>
+    <% end %>
+</ul>
