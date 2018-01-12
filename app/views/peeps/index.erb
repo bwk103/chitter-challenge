@@ -1,7 +1,7 @@
 Chitter
-<ul>
+<ul class="peep-list">
   <% @peeps.each do |peep| %>
-    <li><%=peep.content %>
+    <li class="peep"><%=peep.content %>
       Posted by Ben at <%=peep.time_posted %>
     </li>
     <% end %>
