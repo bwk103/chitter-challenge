@@ -1,7 +1,8 @@
 ENV['RACK_ENV'] ||= 'development'
 
 require 'sinatra/base'
-require './app/models/peep'
+
+require_relative 'data_mapper_setup'
 
 class ChitterApp < Sinatra::Base
 
