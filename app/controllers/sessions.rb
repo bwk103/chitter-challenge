@@ -4,6 +4,12 @@ class ChitterApp < Sinatra::Base
     erb(:'/sessions/new')
   end
 
+  delete '/sessions' do
+    session[:user_id] = nil
+    flash[:message] = 'Goodbye'
+    redirect '/peeps'
+  end
+
   post '/sessions' do
     user = User.authenticate(params[:username], params[:password])
     if user

@@ -8,6 +8,8 @@ class ChitterApp < Sinatra::Base
   set :partial_template_engine, :erb
   enable :partial_underscores
 
+  use Rack::MethodOverride
+
 
   helpers do
     def current_user
