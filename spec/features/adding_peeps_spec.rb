@@ -23,4 +23,10 @@ feature 'adding peeps', type: :feature do
     click_button 'Peep'
     expect(page).to have_content 'This is a test'
   end
+
+  scenario 'users not signed in cannot post a peep' do
+    click_button 'Sign out'
+    visit 'peeps/new'
+    expect(page).to have_content 'You must be signed in to post a Peep'
+  end
 end
