@@ -1,17 +1,25 @@
-<% if current_user %>
-  Welcome, <%=current_user.name %>
-
-  <form action="/sessions" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input class="button" type="submit" value="Sign out">
-  </form>
-<% end %>
-
-Chitter
-<ul class="peep-list">
-  <% @peeps.each do |peep| %>
-    <li class="peep"><%=peep.content %>
-      Posted by <%=peep.user.username %> at <%=peep.time_posted %>
-    </li>
-    <% end %>
-</ul>
+<div class="row">
+  <div class="col-md-2">
+    <div class="col-md-12">
+      <div id="user_info">
+        <p>This is where the current user information will go</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="col-md-12">
+      <ul class="peep-list">
+        <% @peeps.each do |peep| %>
+          <%= partial :peep, locals:{peep: peep} %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="col-md-12">
+      <div id="follow_list">
+        <p>This is where something else will go</p>
+      </div>
+    </div>
+  </div>
+</div>

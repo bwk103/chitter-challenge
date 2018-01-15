@@ -16,7 +16,7 @@ feature 'viewing peeps', type: :feature do
     visit '/peeps/new'
     fill_in 'content', with: 'This will be at the top of the page'
     click_button 'Peep'
-    top_peep = first('li')
+    top_peep = page.all('.peep')[0]
     expect(top_peep).to have_content 'This will be at the top of the page'
   end
 
@@ -35,7 +35,7 @@ feature 'viewing peeps', type: :feature do
     fill_in 'content', with: 'Another test peep'
     Timecop.freeze(Time.local(2018)) do
       click_button 'Peep'
-      expect(page).to have_content '2018-01-01 00:00:00'
+      expect(page).to have_content Time.local(2018).strftime('%D - %R')
     end
   end
 end

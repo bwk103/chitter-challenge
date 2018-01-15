@@ -1,0 +1,12 @@
+<li class="peep">
+  <div class="card">
+    <div class="card-block">
+      <div class="card-body">
+        <h5 class="card-title"><%= peep.user.name %>
+          <h6 class="mb-2 text-muted">@<%= peep.user.username %> : <%= peep.time_posted.strftime('%D - %R') %></h6>
+        </h5>
+        <p class="card-text"><%= peep.content %></p>
+      </div>
+    </div>
+  </div>
+</li>

@@ -1,6 +1,11 @@
-<p>Add new Peep</p>
-<form action="/peeps" method="post">
-  <label for="content"></label>
-  <textarea name="content" rows="8" placeholder="Write your peep here" cols="80"></textarea>
-  <input type="submit" value="Peep">
-</form>
+<div class="row">
+  <div class="col-md-6 mx-auto">
+    <form action="/peeps" method="post">
+      <div class="form-group">
+        <label for="content"></label>
+        <textarea class="form-control" name="content" rows="8" placeholder="Peep away...." cols="80"></textarea>
+      </div>
+      <input class="btn btn-block btn-outline-dark" type="submit" value="Peep">
+    </form>
+  </div>
+</div>
