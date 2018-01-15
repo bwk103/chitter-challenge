@@ -10,4 +10,17 @@ module UserHelpers
     click_button 'Sign Up'
   end
 
+  def sign_in
+    fill_in 'username', with: 'mia'
+    fill_in 'password', with: 'test'
+    click_button 'Sign In'
+  end
+
+  def incorrect_sign_in
+    visit '/sessions/new'
+    fill_in 'username', with: 'mia'
+    fill_in 'password', with: 'wrong'
+    click_button 'Sign In'
+  end
+
 end

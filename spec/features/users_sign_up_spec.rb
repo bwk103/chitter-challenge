@@ -30,4 +30,14 @@ feature 'sign up', type: :feature do
     expect(added_user.name).to eq 'Alex'
   end
 
+  scenario 'user informed when error occurs' do
+    visit '/users/new'
+    fill_in 'name', with: 'Paul'
+    fill_in 'username', with: 'paul_test'
+    fill_in 'password', with: 'test'
+    fill_in 'confirm_password', with: 'test'
+    click_button 'Sign Up'
+    expect(page).to have_content 'Email must not be blank'
+  end
+
 end

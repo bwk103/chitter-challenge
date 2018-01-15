@@ -10,6 +10,7 @@ class ChitterApp < Sinatra::Base
       session[:user_id] = @user.id
       redirect '/peeps'
     else
+      flash.keep[:error] = @user.errors.full_messages
       redirect '/users/new'
     end
   end
