@@ -1,12 +1,22 @@
 <div class="row">
-  <div class="col-md-2">
-    <div class="col-md-12">
-      <div id="user_info">
-        <p>This is where the current user information will go</p>
+  <% if current_user %>
+    <div class="col-md-3">
+      <div class="col-md-12">
+        <div>
+          <div id="user_info" class="card">
+            <img class="card-img-top mx-auto" src="https://pbs.twimg.com/profile_images/903228832580329472/XPva8OL9_400x400.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Profile</h5>
+                <strong>Name:</strong><p class="card-text text-muted"><%= current_user.name %></p>
+                <strong>Username:</strong><p class="card-text text-muted"> @<%= current_user.username %></p>
+                <strong>Peep Count:</strong><p class="card-text text-muted"> <%=current_user.peeps.count %></p>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-8">
+    <% end %>
+  <div class="col-md-6">
     <div class="col-md-12">
       <ul class="peep-list">
         <% @peeps.each do |peep| %>
@@ -15,7 +25,7 @@
       </ul>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
     <div class="col-md-12">
       <div id="follow_list">
         <p>This is where something else will go</p>
