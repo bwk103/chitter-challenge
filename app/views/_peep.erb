@@ -7,7 +7,13 @@
         </h5>
         <h6 class="mb-2 text-muted"><%= peep.time_posted.strftime('%D - %R') %></h6>
         <p class="card-text"><%= peep.content %></p>
+        <a class="card-link" href="/peeps/<%=peep.id%>/comments/new">Comment</a>
       </div>
     </div>
   </div>
+  <% if peep.comments %>
+    <% peep.comments.each do |comment| %>
+      <%= partial :comment, locals:{comment:comment, peep:peep} %>
+    <%end%>
+  <%end%>
 </li>

@@ -1,3 +1,41 @@
+/* General Styles */
+
+body {
+  background-color: #e6ecf0 !important;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+/* NavBar Styles */
+
+nav {
+  border-top: 1px solid rgba(199, 199, 199, 0.62);
+  border-bottom: 1px solid rgba(199, 199, 199, 0.62);
+}
+
+  nav .nav-link{
+  color: #01161E !important;
+  margin-right: 20px;
+  }
+
+  nav .navbar-text {
+  color: #01161E !important;
+  margin-right: 20px;
+  }
+
+  nav .btn.btn-link{
+  color: #01161E !important;
+  text-decoration: none;
+  }
+
+/* Layout wrapper */
 
 .wrapper {
   min-height: 100%;
@@ -6,34 +44,7 @@
   margin: 0 auto -70px;
 }
 
-nav {
-  border-top: 1px solid rgba(199, 199, 199, 0.62);
-  border-bottom: 1px solid rgba(199, 199, 199, 0.62);
-}
-
-nav .nav-link{
-  color: #01161E !important;
-  margin-right: 20px;
-}
-
-nav .navbar-text {
-  color: #01161E !important;
-  margin-right: 20px;
-}
-
-nav .btn.btn-link{
-  color: #01161E !important;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  margin-top: 20px;
-}
-
-body {
-  background-color: #e6ecf0 !important;
-}
+/* Layout container */
 
 .container {
   background-color: white;
@@ -46,21 +57,21 @@ body {
 
 .card {
   border: none!important;
-  border-left: none!important;
-  border-right: none!important;
 }
+
+/* Column backgrounds */
 
 .col-md-12 {
   background-color: white;
 }
 
-form {
-  margin-bottom: 20px;
-}
+/* Button backgrounds */
 
 .btn.btn-block {
   background: white;
 }
+
+/* User Info */
 
 #user_info p {
   font-size: 15px
@@ -97,7 +108,6 @@ h5.text-center {
 img#profile_image {
   height: 40px;
   width: 40px;
-  margin-top: -20px;
 }
 
 .peep {
@@ -114,4 +124,9 @@ ul#user-list {
 
 .message, .error {
   margin-top: 5px;
+}
+
+#comment {
+  margin-left: 20px;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.62)
 }

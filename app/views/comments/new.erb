@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-6 mx-auto ">
+    <form action="/peeps/<%=@peep_id%>/comments" method="post">
+      <div class="form-group">
+        <label for="content"></label>
+        <textarea class="form-control" name="content" rows="8" placeholder="Tell them what you think...." cols="80"></textarea>
+      </div>
+      <input class="btn btn-block btn-outline-dark" type="submit" value="Comment">
+    </form>
+  </div>
+</div>

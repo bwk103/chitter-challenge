@@ -25,4 +25,23 @@ class ChitterApp < Sinatra::Base
     @user.save
     redirect '/peeps'
   end
+
+  get '/peeps/:id/comments/new' do
+    if current_user
+      @peep_id = params[:id]
+      erb(:'comments/new')
+    else
+      flash[:message] = 'You must be signed in to leave a comment'
+      redirect '/peeps'
+    end
+  end
+
+  post '/peeps/:id/comments' do
+    @peep = Peep.first(id: params[:id])
+    @comment = Comment.create(content: params[:content], time_posted: Time.now,
+                            peep_id: params[:id], user_id: current_user.id)
+    @peep.comments << @comment
+    current_user.comments << @comment
+    redirect '/peeps'
+  end
 end

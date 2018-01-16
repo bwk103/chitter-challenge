@@ -14,6 +14,7 @@ class User
   validates_uniqueness_of :username, :email
 
   has n, :peeps
+  has n, :comments
 
   attr_reader :password
   attr_accessor :confirm_password

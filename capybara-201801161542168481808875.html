@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chitter</title>
+    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/peeps">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/peeps/new">Peep</a>
+        </li>
+      </ul>
+      <a class="navbar-brand text-center" href="/peeps">
+        <i class="fab fa-earlybirds"></i>
+      </a>
+      
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/users/new">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sessions/new">Sign In</a>
+            </li>
+          </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- #  -->
+
+        
+  <div class="error">
+    <h6 class="text-center">Username is already taken</h6>
+  </div>
+  
+  <div class="error">
+    <h6 class="text-center">Email is already taken</h6>
+  </div>
+  
+
+      <div class="container">
+        <div class="row">
+  <div class="col-md-6 mx-auto">
+    <form action="/users" method="post">
+      <div class="form-group">
+        <label for="name"></label>
+        <input class="form-control" type="text" name="name" placeholder="Name" required>
+        <label for="username"></label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input class="form-control" type="text" name="username" placeholder="Username" required>
+        </div>
+        <label for="profile_image_url"></label>
+        <input class="form-control" type="text" name="profile_image_url" placeholder="Profile Image URL" required>
+        <label for="email"></label>
+        <input class="form-control" type="email" name="email" placeholder="Email" required>
+        <label for="password"></label>
+        <input class="form-control" type="password" name="password" placeholder="Password" required>
+        <label for="confirm_password"></label>
+        <input class="form-control" type="password" name="confirm_password" placeholder="Confirm Password" required>
+      </div>
+      <input class="btn btn-block btn-outline-dark" type="submit" value="Sign Up">
+    </form>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
