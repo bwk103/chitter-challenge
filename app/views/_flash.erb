@@ -1,8 +1,12 @@
 <% if flash[:message] %>
-  <%= flash[:message] %>
+  <div class="message">
+    <h6 class="text-center"><%= flash[:message] %></h6>
+  </div>
 <% end %>
 <% if flash[:error] %>
   <% flash[:error].each do |error| %>
-    <%= error %>
+  <div class="error">
+    <h6 class="text-center"><%= error %></h6>
+  </div>
   <% end %>
 <% end %>

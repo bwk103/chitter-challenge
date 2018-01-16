@@ -5,6 +5,7 @@ class ChitterApp < Sinatra::Base
 
   get '/peeps' do
     @peeps = Peep.all.reverse
+    @users = User.all.sample(10)
     erb(:'peeps/index')
   end
 

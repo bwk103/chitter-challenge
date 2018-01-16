@@ -27,8 +27,19 @@
   </div>
   <div class="col-md-3">
     <div class="col-md-12">
-      <div id="follow_list">
-        <p>This is where something else will go</p>
+      <div>
+        <div class="card">
+          <div class="card-block">
+            <h5 class="text-center">Who to Follow</h5>
+            <ul id="user-list">
+              <% if @users %>
+                <%@users.each do |user| %>
+                  <%= partial :user, locals:{user:user} %>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

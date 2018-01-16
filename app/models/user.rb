@@ -19,7 +19,7 @@ class User
   attr_accessor :confirm_password
 
   def self.authenticate(username, password)
-    user = User.first(username)
+    user = User.first(username: username)
     if user && BCrypt::Password.new(user.password_digest) == password
       return user
     else

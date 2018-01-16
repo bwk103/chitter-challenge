@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
   </head>
   <body>
-    <%= partial :navbar %>
-    <div class="container">
+    <div class="wrapper">
+      <%= partial :navbar %>
       <%= partial :flash %>
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

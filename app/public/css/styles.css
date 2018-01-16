@@ -1,3 +1,11 @@
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -70px;
+}
+
 nav {
   border-top: 1px solid rgba(199, 199, 199, 0.62);
   border-bottom: 1px solid rgba(199, 199, 199, 0.62);
@@ -34,12 +42,6 @@ body {
 .row {
   background: #e6ecf0!important;
   margin-top: 15px;
-}
-
-.peep {
-  /* border-top: 0.7px solid rgba(199, 199, 199, 0.62); */
-  border-bottom: 0.7px solid rgba(199, 199, 199, 0.62);
-  /* margin-top: 20px; */
 }
 
 .card {
@@ -84,4 +86,32 @@ h5 span {
 h6.mb-2.text-muted {
   margin-top: -10px;
   font-size: 14px;
+}
+
+h5.text-center {
+  margin-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(199, 199, 199, 0.62);
+}
+
+img#profile_image {
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+}
+
+.peep {
+  border-bottom: 1px solid rgba(199, 199, 199, 0.62);
+}
+
+ul#user-list {
+  margin-top: 30px;
+}
+
+.user {
+  margin-top: -30px;
+}
+
+.message, .error {
+  margin-top: 5px;
 }
