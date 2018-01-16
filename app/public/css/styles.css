@@ -81,6 +81,7 @@ h5 span {
   font-size: 14px;
 }
 
-h6 {
-  font-size: 20px;
+h6.mb-2.text-muted {
+  margin-top: -10px;
+  font-size: 14px;
 }

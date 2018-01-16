@@ -5,7 +5,12 @@
         <label for="name"></label>
         <input class="form-control" type="text" name="name" placeholder="Name" required>
         <label for="username"></label>
-        <input class="form-control" type="text" name="username" placeholder="Username" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input class="form-control" type="text" name="username" placeholder="Username" required>
+        </div>
         <label for="profile_image_url"></label>
         <input class="form-control" type="text" name="profile_image_url" placeholder="Profile Image URL" required>
         <label for="email"></label>

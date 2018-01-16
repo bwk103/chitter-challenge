@@ -3,7 +3,12 @@
     <form action="/sessions" method="post">
       <div class="form-group">
         <label for="username"></label>
-        <input class="form-control"type="text" name="username" placeholder="Username" required>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <input class="form-control"type="text" name="username" placeholder="Username" required>
+        </div>
         <label for="password"></label>
         <input class="form-control" type="password" name="password" placeholder="Password" required>
       </div>
