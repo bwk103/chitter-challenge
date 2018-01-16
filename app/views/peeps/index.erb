@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div>
           <div id="user_info" class="card">
-            <img class="card-img-top mx-auto" src="https://pbs.twimg.com/profile_images/903228832580329472/XPva8OL9_400x400.jpg">
+            <img class="card-img-top mx-auto" src="<%=current_user.profile_image_url %>">
               <div class="card-body">
                 <h5 class="card-title">Profile</h5>
                 <strong>Name:</strong><p class="card-text text-muted"><%= current_user.name %></p>

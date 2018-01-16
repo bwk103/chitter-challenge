@@ -8,6 +8,7 @@ class User
   property :name, String, required: true
   property :username, String, required: true
   property :email, String, required: true
+  property :profile_image_url, Text
   property :password_digest, Text, required: true
 
   validates_uniqueness_of :username, :email
