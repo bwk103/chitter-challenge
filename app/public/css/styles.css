@@ -120,6 +120,7 @@ ul#user-list {
 
 .user {
   margin-top: -30px;
+  margin-bottom: 5px;
 }
 
 .message, .error {
